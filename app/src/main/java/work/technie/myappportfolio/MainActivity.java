@@ -11,7 +11,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        /*
         Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -64,9 +65,28 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "This button will launch my Capstone app!", Toast.LENGTH_LONG).show();
             }
-        });
-    }
+        });*/
+/*****NEAT AND CLEAN WAY********/
+        Button b1=(Button)findViewById(R.id.button1);
+        b1.setOnClickListener(this);
+        Button b2=(Button)findViewById(R.id.button2);
+        b2.setOnClickListener(this);
+        Button b3=(Button)findViewById(R.id.button3);
+        b3.setOnClickListener(this);
+        Button b4=(Button)findViewById(R.id.button4);
+        b4.setOnClickListener(this);
+        Button b5=(Button)findViewById(R.id.button5);
+        b5.setOnClickListener(this);
+        Button b6=(Button)findViewById(R.id.button6);
+        b6.setOnClickListener(this);
 
+    }
+    @Override
+    public void onClick(View v){
+        String buttonText="This button will launch my "+((Button)v).getText().toString()+" app!";//extracting text when button gets clicked
+        Toast.makeText(this,buttonText,Toast.LENGTH_LONG).show();
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
