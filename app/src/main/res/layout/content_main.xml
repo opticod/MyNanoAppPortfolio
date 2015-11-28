@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:text="My Nanodegree Apps!"
         android:textSize="26dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:textColor="#000"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
